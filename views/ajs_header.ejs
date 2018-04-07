@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title><%= title %></title>
+<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="ui/ui-bootstrap-2.5.0-csp.css">
+<% if (typeof incl_bulma != 'undefined' && incl_bulma) { %>
+  <link rel="stylesheet" href="bootstrap/bulma.min.css">
+<%} %>
+<link rel="stylesheet" href="css/style.css">
+<% if (typeof js != 'undefined' && js) { %>
+  <script src="angularjs/angular.min.js"></script>
+  <script src="angularjs/angular-animate.min.js"></script>
+  <script src="angularjs/angular-route.min.js"></script>
+  <script src="angularjs/angular-touch.min.js"></script>
+  <script src="ui/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<%} %>
+<% if (typeof incl_chartjs != 'undefined' && incl_chartjs) { %>
+  <script src="chart/Chart.bundle.js"></script>
+  <script src="chart/utils.js"></script>
+  <style>
+  canvas{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+  </style>
+<%} %>
+<% if (typeof js != 'undefined' && js) { %>
+  <script src=<%= "ajs/"+js %> ></script>
+  <body ng-app="a" ng-controller="c" style="margin:10px;">
+<% } else { %>
+  <body style="margin:10px;">
+<% } %>
+<div>
+  <div class="row">
+    <div class="col-md-12" ng-include="'/menu'"></div>
+  </div>
+</div>

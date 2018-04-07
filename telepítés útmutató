@@ -1,0 +1,5 @@
+1. NodeJS telepítése (https://nodejs.org/en/)
+2. MongoDB Community Server telepítése (https://www.mongodb.com/download-center?jmp=nav#community)
+3. npm i (az angejsboot könyvtárban benne!)
+4. npm test (az angejsboot könyvtárban benne!)
+5. a böngészőben: localhost:3000

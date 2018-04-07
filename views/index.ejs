@@ -1,0 +1,19 @@
+<%- include('ajs_header', {
+              title: 'A&E_js',
+              js:    'index.js'
+    } ) -%>
+<hr>
+
+
+
+<input ng-model="input" ng-keyup="bevszur($event)">
+<div ng-repeat="elem in szurtlista track by $index">
+  {{elem}}
+</div>
+<br>
+<br>
+<br>
+<button ng-click="kuld()" ng-if="gomblatszik">
+  küld
+</button>
+<%- include('ajs_footer') -%>
